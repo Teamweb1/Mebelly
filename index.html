@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Havenly Furniture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="#" aria-label="Havenly home">
+          <span class="brand-mark">H</span>
+          Mebelly
+        </a>
+        <div class="nav-tabs" aria-label="Site sections">
+          <a href="#home">Home</a>
+          <a href="#products">Products</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About</a>
+        </div>
+        <div class="nav-actions">
+          <button class="icon-button" id="openWishlist" aria-label="Open wishlist">
+            <span class="icon-heart">♡</span>
+            <span class="counter" id="wishlistCount">0</span>
+          </button>
+          <button class="icon-button" id="openCart" aria-label="Open cart">
+            <span>🛒</span>
+            <span class="counter" id="cartCount">0</span>
+          </button>
+          <button class="profile-button" aria-label="Profile">
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="search-wrap">
+          <form class="search-bar" id="searchForm">
+            <label>
+              <span>What</span>
+              <input id="whatInput" type="search" placeholder="Sofa, chair, bed" />
+            </label>
+            <label>
+              <span>Style</span>
+              <select id="styleInput">
+                <option value="">Any style</option>
+                <option>Modern</option>
+                <option>Classic</option>
+                <option>Scandinavian</option>
+                <option>Minimal</option>
+              </select>
+            </label>
+            <label>
+              <span>Price range</span>
+              <select id="priceInput">
+                <option value="">Any price</option>
+                <option value="0-500">Under $500</option>
+                <option value="500-1000">$500 - $1,000</option>
+                <option value="1000-2000">$1,000 - $2,000</option>
+                <option value="2000-99999">$2,000+</option>
+              </select>
+            </label>
+            <button class="search-button" type="submit" aria-label="Search products">⌕</button>
+          </form>
+          <button class="mobile-search-trigger" id="mobileSearchTrigger">Start your search</button>
+        </div>
+
+        <div class="hero-grid">
+          <article class="hero-copy">
+            <p>New season edit</p>
+            <h1>Find furniture you'll love</h1>
+            <a class="primary-link" href="#products">Shop collection</a>
+          </article>
+          <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80" alt="Warm modern living room with neutral sofa" />
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80" alt="Minimal dining area with wood table" />
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Bright bedroom with soft bedding" />
+        </div>
+      </section>
+
+      <section class="section" id="categories">
+        <div class="section-head">
+          <h2>Browse by category</h2>
+          <button class="text-button" id="clearFilters">Clear filters</button>
+        </div>
+        <div class="category-scroll" id="categoryFilters" aria-label="Product categories"></div>
+      </section>
+
+      <section class="section product-section" id="products">
+        <div class="section-head">
+          <div>
+            <h2>Fresh arrivals</h2>
+            <p id="resultCount">Curated pieces for every room</p>
+          </div>
+          <select class="sort-select" id="sortInput" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: low to high</option>
+            <option value="price-high">Price: high to low</option>
+            <option value="rating">Top rated</option>
+          </select>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="about-band" id="about">
+        <div>
+          <h2>Soft forms, thoughtful materials, simple living.</h2>
+          <p>Havenly brings together lounge-ready sofas, sculptural tables, supportive beds, and quiet decor made for real homes.</p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=80" alt="Comfortable sofa with clean modern styling" />
+      </section>
+    </main>
+
+    <aside class="drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Your cart</h2>
+          <button class="icon-button close-drawer" aria-label="Close cart">×</button>
+        </div>
+        <div class="drawer-list" id="cartItems"></div>
+        <label class="promo-box">
+          Promo code
+          <div>
+            <input id="promoInput" placeholder="Try HAVEN10" />
+            <button id="applyPromo">Apply</button>
+          </div>
+        </label>
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <button class="primary-button checkout-button">Checkout</button>
+      </div>
+    </aside>
+
+    <aside class="drawer" id="wishlistDrawer" aria-hidden="true">
+      <div class="drawer-panel">
+        <div class="drawer-head">
+          <h2>Wishlist</h2>
+          <button class="icon-button close-drawer" aria-label="Close wishlist">×</button>
+        </div>
+        <div class="drawer-list" id="wishlistItems"></div>
+      </div>
+    </aside>
+
+    <section class="detail-modal" id="detailModal" aria-hidden="true">
+      <div class="detail-panel">
+        <button class="icon-button detail-close" id="closeDetail" aria-label="Close product detail">×</button>
+        <div class="detail-gallery" id="detailGallery"></div>
+        <div class="detail-info" id="detailInfo"></div>
+      </div>
+    </section>
+
+    <section class="mobile-search-modal" id="mobileSearchModal" aria-hidden="true">
+      <div class="mobile-search-card">
+        <div class="drawer-head">
+          <h2>Search furniture</h2>
+          <button class="icon-button" id="closeMobileSearch" aria-label="Close search">×</button>
+        </div>
+        <form id="mobileSearchForm" class="mobile-search-form">
+          <label>What<input id="mobileWhatInput" placeholder="Sofa, chair, bed" /></label>
+          <label>Style<select id="mobileStyleInput"></select></label>
+          <label>Price range<select id="mobilePriceInput"></select></label>
+          <button class="primary-button" type="submit">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <button class="sticky-cart" id="stickyCartButton">Cart <span id="stickyCartTotal">$0</span></button>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <h3>Support</h3>
+          <a href="#">Help center</a>
+          <a href="#">Delivery</a>
+          <a href="#">Returns</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="#">About</a>
+          <a href="#">Design trade</a>
+          <a href="#">Careers</a>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>English</span>
+        <span>USD</span>
+        <span>Instagram · Pinterest · X</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
