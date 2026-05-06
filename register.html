@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ro'yxatdan o'tish | Mebel</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-visual register-visual" aria-label="Mebel do'koni">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <span>Mebel</span>
+        </div>
+        <div class="visual-copy">
+          <h1>Yangi hisob yarating</h1>
+          <p>Sevimli mebellaringizni saqlang, buyurtma holatini kuzating va shaxsiy takliflardan foydalaning.</p>
+        </div>
+      </section>
+
+      <section class="auth-panel" aria-labelledby="register-title">
+        <div class="auth-card">
+          <a class="back-link" href="index.html">Bosh sahifaga qaytish</a>
+          <h2 id="register-title">Ro'yxatdan o'tish</h2>
+          <p class="auth-muted">Ma'lumotlaringizni kiriting va xaridni qulayroq boshlang.</p>
+
+          <form class="auth-form" action="#" method="post">
+            <label for="register-name">Ism</label>
+            <input id="register-name" name="name" type="text" autocomplete="name" placeholder="Ismingiz" required />
+
+            <label for="register-email">Email</label>
+            <input id="register-email" name="email" type="email" autocomplete="email" placeholder="example@mail.com" required />
+
+            <label for="register-phone">Telefon</label>
+            <input id="register-phone" name="phone" type="tel" autocomplete="tel" placeholder="+998 90 123 45 67" required />
+
+            <label for="register-password">Parol</label>
+            <input id="register-password" name="password" type="password" autocomplete="new-password" placeholder="Kamida 8 ta belgi" minlength="8" required />
+
+            <label class="check terms">
+              <input type="checkbox" name="terms" required />
+              <span>Foydalanish shartlariga roziman</span>
+            </label>
+
+            <button class="primary-btn" type="submit">Hisob yaratish</button>
+          </form>
+
+          <p class="auth-switch">Hisobingiz bormi? <a href="login.html">Kirish</a></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

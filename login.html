@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kirish | Mebel</title>
+    <link rel="stylesheet" href="auth.css" />
+  </head>
+  <body>
+    <main class="auth-shell">
+      <section class="auth-visual" aria-label="Mebel do'koni">
+        <div class="brand">
+          <span class="brand-mark">M</span>
+          <span>Mebel</span>
+        </div>
+        <div class="visual-copy">
+          <h1>Hisobingizga kiring</h1>
+          <p>Buyurtmalar, sevimli mahsulotlar va yetkazib berish ma'lumotlarini bitta joyda boshqaring.</p>
+        </div>
+      </section>
+
+      <section class="auth-panel" aria-labelledby="login-title">
+        <div class="auth-card">
+          <a class="back-link" href="index.html">Bosh sahifaga qaytish</a>
+          <h2 id="login-title">Kirish</h2>
+          <p class="auth-muted">Davom etish uchun telefon raqamingiz yoki emailingizni kiriting.</p>
+
+          <form class="auth-form" action="#" method="post">
+            <label for="login-identifier">Email yoki telefon</label>
+            <input id="login-identifier" name="identifier" type="text" autocomplete="username" placeholder="example@mail.com" required />
+
+            <label for="login-password">Parol</label>
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Parolingiz" required />
+
+            <div class="form-row">
+              <label class="check">
+                <input type="checkbox" name="remember" />
+                <span>Eslab qolish</span>
+              </label>
+              <a href="#">Parolni unutdingizmi?</a>
+            </div>
+
+            <button class="primary-btn" type="submit">Kirish</button>
+          </form>
+
+          <p class="auth-switch">Hisobingiz yo'qmi? <a href="register.html">Ro'yxatdan o'ting</a></p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
